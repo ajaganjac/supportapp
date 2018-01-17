@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   
   get 'users', to: 'users#index'
   
+  resources :conversations, only: [:index, :show, :destroy]
+  resources :messages, only: [:new, :create]
+  
   
 end

@@ -44,6 +44,7 @@
                     <%= link_to("logout", destroy_user_session_path,
                             class: "btn btn-xs btn-danger", method: :delete) %>
                  </li>
+                 <li><%= link_to 'Your Conversations', conversations_path %></li>
            </ul>
         </div>
         <% end %>
