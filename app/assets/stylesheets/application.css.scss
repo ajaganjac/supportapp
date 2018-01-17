@@ -10,6 +10,47 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require devise_bootstrap_views
  *= require_tree .
  *= require_self
  */
+
+.article-actions {
+
+border-top: 1px solid #eaeaea;
+
+padding-top: 5px;
+
+}
+
+.description {
+
+margin-top: 0;
+
+}
+
+.article-title {
+
+font-weight: bold;
+
+font-size: 1.5em;
+
+}
+
+.article-body {
+
+border-top: 1px solid #eaeaea;
+
+padding-top: 15px;
+
+padding-bottom: 15px;
+
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.left-padding {
+  padding-left: 15px !important;
+}
