@@ -16,8 +16,9 @@ Rails.application.routes.draw do
   
   get 'users', to: 'users#index'
   
-  resources :conversations, only: [:index, :show, :destroy]
-  resources :messages, only: [:new, :create]
+  match '/users/:id',     to: 'users#show',       via: 'get'
   
+  
+
   
 end

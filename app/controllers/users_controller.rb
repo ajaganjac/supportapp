@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
   def index
+    users = User.all
   end
   
   def show
-  @user = User.find_by_location(params[:id])
+    user = User.find_by_id(params[:id])
+    data = Article.where(:user => user) 
   end
+   
+  
+  
 end

@@ -34,17 +34,20 @@
             <li><%= link_to "Browse questions", articles_path  %></li>
             <li><%= link_to "My Profile", edit_registration_path(current_user) %></li>
             <li><%= link_to "About", pages_about_path  %></li>
+            
            
           </ul>
               <ul class="nav navbar-right col-md-4">
+              
               <li class="col-md-8 user-name text-right">
               
               </li>
                   <li class="col-md-4 logout">
                     <%= link_to("logout", destroy_user_session_path,
-                            class: "btn btn-xs btn-danger", method: :delete) %>
+                            class: "btn  btn-danger", method: :delete) %>
                  </li>
-                 <li><%= link_to 'Your Conversations', conversations_path %></li>
+                 
+                 
            </ul>
         </div>
         <% end %>
@@ -59,12 +62,12 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
+            <h4>Acties</h4>
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li class="nav-header">Dit zijn mogelijke opties:</li><br>
+              <li><%= link_to "Alle gebruikers", users_index_path  %></li>
+              <li><a href="https://supporappoi.herokuapp.com/users/<%= current_user.id %>">Mijn profiel pagina</a></li>
+              <li><%= link_to "Nieuwe vraag", new_article_path  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

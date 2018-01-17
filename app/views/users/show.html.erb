@@ -1,1 +1,40 @@
-<h1><%= @user.first_name %></h1>
+<% user = User.find_by_id(params[:id]) %>
+<div class="alert alert-info" role="alert">
+
+<br>
+  <center> <%= image_tag user.gravatar_url %> </center> <br><hr><br>
+  <div class="jumbotron"><h2> Hoi! Ik ben <%= user.first_name %> en 
+    ik kom uit <%= user.location %> .<br> </h2>
+    <h3>
+      Over mij:
+    </h3> <br> <%= user.description %></div> 
+
+</div>
+
+<br>
+
+<div class="alert alert-danger" role="alert">
+  
+Dit is mijn e-mail: <%= user.email %>
+  
+
+</div>
+
+
+
+<h3>
+  Mijn vragen
+</h3>
+
+<div class="jumbotron">
+  
+<% data = Article.where(:user => user) %>
+<% data.each do |data| %>
+  <h4><%= data.title %></h4><hr></b>
+  <%= data.description %><br><hr>
+  <% end %>
+  
+  
+  
+  
+</div>
