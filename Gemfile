@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'devise'
+gem 'gravtastic'
+gem "mailboxer"
 gem 'twitter-bootstrap-rails' 
 gem 'jquery-rails' 
 gem 'devise-bootstrap-views'

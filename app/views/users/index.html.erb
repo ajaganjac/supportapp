@@ -1,0 +1,11 @@
+<% @users = User.all %>
+<% @users.each do |user| %>
+<div class="alert alert-info" role="alert">
+
+<div class="row">
+  <div class="col-sm-4"> <%= image_tag current_user.gravatar_url %> <br></div>
+  <div class="col-sm-4"><%= user.first_name %><br/></div>
+  <div class="col-sm-4"> <%= user.location %><br></div>
+</div>
+
+</div><% end %>

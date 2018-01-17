@@ -12,17 +12,19 @@
 
 <div class="article-title">
 
-<%= link_to article.title, article_path(article) %>
+<center><%= link_to article.title, article_path(article) %> </center>
 
 </div>
 
 <div class="article-body">
+  
+  <center> <%= image_tag current_user.gravatar_url %> <br><hr> </center>
 
 <%= truncate(article.description, length: 100) %>
   
 <div class="article-meta-details">
 
-<small>Created by: <%= article.user.first_name if article.user%>,
+<small>Created by: <%= article.user.first_name if article.user%>, from <%= article.user.location if article.user%>,
 
 <%= time_ago_in_words(article.created_at) %> ago,
 
@@ -53,5 +55,7 @@ class: "btn btn-xs btn-danger" %>
 </div>
 
 <% end %>
+
+
 
 <%= link_to 'New Article', new_article_path %>
