@@ -44,7 +44,7 @@ last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
 
 <div class="article-actions"> 
 
-<% if user_signed_in? && (current_user == article.user || current_user.admin?) %>
+<% if user_signed_in? && (current_user == article.user%>
 
 <%= link_to "Edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
 
