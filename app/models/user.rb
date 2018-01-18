@@ -25,17 +25,12 @@ class User < ApplicationRecord
     "Anonymous"
   end
   
-  geocoded_by :ip_adress   # can also be an IP address
-  after_validation :geocode          # auto-fetch coordinates
+  
   
  
  
  
-  def store
-    
-    return "#{ip_adress} #{latitude} #{longitude}"
-    
-  end
+
   
   
 end

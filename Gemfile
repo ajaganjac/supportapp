@@ -25,7 +25,7 @@ gem 'twitter-bootstrap-rails'
 gem 'jquery-rails' 
 gem 'devise-bootstrap-views'
 gem 'geocoder'
-gem 'mongoid', '~> 6.2', '>= 6.2.1'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

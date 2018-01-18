@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   
   match '/users/:id',     to: 'users#show',       via: 'get'
   
+  get 'categories/index', to: 'categories#index'
+  
+  resources :categories, except: [:destroy]
   
 
   

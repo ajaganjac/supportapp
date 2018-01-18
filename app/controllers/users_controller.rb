@@ -3,10 +3,7 @@ class UsersController < ApplicationController
     users = User.all
   end
   
-  def show
-    user = User.find_by_id(params[:id])
-    data = Article.where(:user => user) 
-  end
+  
    
   
   
